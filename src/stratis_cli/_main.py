@@ -21,6 +21,7 @@ import justbytes as jb
 from ._error_reporting import handle_error
 from ._errors import StratisCliActionError, StratisCliEnvironmentError
 from ._parser import gen_parser
+from ._actions import check_stratisd_version
 
 
 def run():
@@ -38,8 +39,10 @@ def run():
         Run according to the arguments passed.
         """
         result = parser.parse_args(command_line_args)
+
         try:
             try:
+                check_stratisd_version()
                 result.func(result)
 
             # Keyboard Interrupt is recaught at the outermost possible layer.

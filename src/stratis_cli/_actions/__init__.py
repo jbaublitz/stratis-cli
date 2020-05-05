@@ -14,7 +14,7 @@
 """
 Package mediating dbus actions.
 """
-
+from ._version import check_stratisd_version
 from ._constants import BLOCKDEV_INTERFACE
 from ._constants import FILESYSTEM_INTERFACE
 from ._constants import POOL_INTERFACE

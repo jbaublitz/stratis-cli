@@ -15,7 +15,6 @@
 """
 Miscellaneous functions.
 """
-
 from .._errors import (
     StratisCliEnginePropertyError,
     StratisCliEnvironmentError,

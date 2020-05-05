@@ -189,6 +189,9 @@ def _interpret_errors(errors):
             fmt_str = "It appears that you issued an unintended command: %s"
             return fmt_str % error
 
+        if isinstance(error, StratisCliStratisdError):
+            fmt_str = "The stratisd version need to be updated."
+
         # An incoherence error should be pretty untestable. It can arise
         # * in the case of a stratisd bug. We would expect to fix that very
         # soon, so should not have a test in that case.

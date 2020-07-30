@@ -290,7 +290,7 @@ class StratisCertify(unittest.TestCase):  # pylint: disable=too-many-public-meth
 
         self._unittest_command(
             StratisDbus.pool_create(pool_name, StratisCertify.DISKS, None),
-            dbus.UInt16(0),
+            dbus.UInt16(1),
         )
 
     def test_pool_create_permissions(self):
